@@ -14,16 +14,22 @@ function play_round(){
   console.log("user:" + player_choice)
   let computer_choice = getComputerChoice()
   console.log("computer: " + computer_choice)
-  if((computer_choice == "paper" && player_choice == "rock") || (computer_choice == "rock" && player_choice == "scissor") 
-  || (computer_choice == "scissor" && player_choice == "paper")){
-    console.log("computer wins")
+  if(
+    (computer_choice == "paper" && player_choice == "rock") || 
+    (computer_choice == "rock" && player_choice == "scissor") || 
+    (computer_choice == "scissor" && player_choice == "paper")
+    ){
+    return "computer wins"
   }
-   else if((computer_choice == "rock" && player_choice == "paper") || (computer_choice == "scissor" && player_choice == "rock") 
-   || (computer_choice == "paper" && player_choice == "scissor")){
-    console.log("user wins")
+   else if(
+    (computer_choice == "rock" && player_choice == "paper") || 
+    (computer_choice == "scissor" && player_choice == "rock") || 
+    (computer_choice == "paper" && player_choice == "scissor")
+    ){
+    return "user wins"
    }
    else{
-    console.log("draw")
+    return "draw"
    }
 }
-play_round()
+console.log(play_round())
